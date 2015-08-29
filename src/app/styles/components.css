@@ -1,0 +1,23 @@
+.btn-normalized {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  outline: none;  
+  text-decoration: none;
+}
+
+.input-normalized {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  display: inline-block;
+}
+
+:export {
+  btn-normalized: btn-normalized;
+  input-normalized: input-normalized;
+}
