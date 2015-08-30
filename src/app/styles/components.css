@@ -15,9 +15,10 @@
   font-weight: inherit;
   line-height: inherit;
   display: inline-block;
+  outline: none;
 }
 
-:export {
+/*:export {
   btn-normalized: btn-normalized;
   input-normalized: input-normalized;
-}
+}*/

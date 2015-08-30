@@ -1,0 +1,6 @@
+@import 'settings.colors';
+
+.item {
+  color: var(--clr-dark-navy);
+  font-size: 5em;
+}

@@ -1,0 +1,9 @@
+@import 'settings.colors';
+
+.root {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 12em;
+  width: 100%;
+}

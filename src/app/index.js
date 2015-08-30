@@ -1,8 +1,9 @@
-// import './styles/main'
+import './styles/main'
 import React, { PropTypes } from 'react'
 import { RouteHandler } from 'react-router'
-// import { connect } from 'react-redux'
-// import { initApp } from './state/actions'
+import { connect } from 'react-redux'
+import { initApp } from 'state/actions'
+import Footer from './components/org.Footer'
 
 const App = React.createClass({
 
@@ -12,21 +13,18 @@ const App = React.createClass({
 
   componentDidMount () {
     const { dispatch } = this.props
-    // dispatch(initApp())
+    dispatch(initApp())
   },
 
   render () {
     return (
       <div>
-        Hello World!
+        <RouteHandler />
+        <Footer />
       </div>
     )
   }
 
 })
 
-        // <RouteHandler />
-
-
-// export default connect()(App)
-export default App
+export default connect()(App)

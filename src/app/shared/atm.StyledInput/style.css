@@ -1,0 +1,11 @@
+@import 'settings.colors';
+
+.input {
+  composes: input-normalized from 'components';
+  border: solid 3px var(--clr-red);
+  line-height: 1.5;
+  padding: 5px;
+  font-size: 1.2em;
+  color: var(--clr-red);
+  box-shadow: 0 4px 0 0 var(--clr-red);
+}

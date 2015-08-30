@@ -1,0 +1,297 @@
+:root {
+  --top: 0;
+  --clr-orange: #ffac3d;
+  --clr-orange2: #f3973e;
+}
+
+.charmander {
+  /*position: absolute;*/
+  position: relative;
+  /*left: 50%;*/
+  /*transform: translateX(-50%)  translateY(-50%);*/
+  /*top: 50%;*/
+  width: 200px;
+  height: 266px;
+  cursor: pointer;
+}
+
+.charmander * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: .18s cubic-bezier(.7,.3,0,1); 
+}
+
+.nostril {
+  background-color: #5f617a;
+}
+
+.nostril.left {
+  clip-path: polygon( 
+    46% calc(var(--top) + 30%) ,
+    48% calc(var(--top) + 30%) ,
+    48% calc(var(--top) + 32%) );
+}
+.charmander:hover .nostril.left {
+  clip-path: polygon( 
+    49% calc(var(--top) + 29%) ,
+    49% calc(var(--top) + 30%) ,
+    47% calc(var(--top) + 29%) );
+}
+.charmander:hover .nostril.right {
+  clip-path: polygon( 
+    51% calc(var(--top) + 29%) ,
+    51% calc(var(--top) + 30%) ,
+    53% calc(var(--top) + 29%) );
+
+}
+.nostril.right {
+  clip-path: polygon( 
+    54% calc(var(--top) + 30%) ,
+    52% calc(var(--top) + 30%) ,
+    52% calc(var(--top) + 32%) );
+}
+.eye {
+  background-color: #5f617a;
+}
+.eye.left {
+  clip-path: polygon(
+    48% calc(var(--top) + 15%), 
+    39% calc(var(--top) + 24%), 
+    48% calc(var(--top) + 24%));
+}
+.eye.right {
+  clip-path: polygon(
+    52% calc(var(--top) + 15%), 
+    61% calc(var(--top) + 24%), 
+    52% calc(var(--top) + 24%));
+}
+.charmander:hover .eye.left {
+  clip-path: polygon(
+    48% calc(var(--top) + 20%), 
+    40% calc(var(--top) + 24%), 
+    48% calc(var(--top) + 24%));
+}
+.charmander:hover .eye.right {
+  clip-path: polygon(
+    52% calc(var(--top) + 20%), 
+    60% calc(var(--top) + 24%), 
+    52% calc(var(--top) + 24%));
+}
+
+.pupil {
+ background-color: white;
+}
+.pupil.right {
+  clip-path: polygon(
+    53% calc(var(--top) + 18%), 
+    55% calc(var(--top) + 20%), 
+    53% calc(var(--top) + 20%));
+}
+.pupil.left {
+  clip-path: polygon(
+    47% calc(var(--top) + 18%), 
+    45% calc(var(--top) + 20%), 
+    47% calc(var(--top) + 20%));
+}
+.charmander:hover .pupil.left {
+  background-color: #5f617a;
+  clip-path: polygon(
+    47% calc(var(--top) + 22%), 
+    43% calc(var(--top) + 23%), 
+    46% calc(var(--top) + 23%));
+}
+.charmander:hover .pupil.right {
+  background-color: #5f617a;
+
+  clip-path: polygon(
+    53% calc(var(--top) + 22%), 
+    57% calc(var(--top) + 23%), 
+    54% calc(var(--top) + 23%));
+}
+
+.arm.left {
+  background-color: var(--clr-orange2);
+  clip-path: polygon(
+    44% calc(var(--top) + 32%),
+    39% calc(var(--top) + 42%), 
+    48% calc(var(--top) + 48%));
+}
+.charmander:hover .arm.left {
+  clip-path: polygon(
+    44% calc(var(--top) + 32%),
+    41% calc(var(--top) + 38%), 
+    22% calc(var(--top) + 28%));
+}
+.arm.right {
+  background-color: var(--clr-orange);
+  clip-path: polygon(
+    56% calc(var(--top) + 32%),
+    61% calc(var(--top) + 42%), 
+    52% calc(var(--top) + 48%));
+}
+.charmander:hover .arm.right {
+  clip-path: polygon(
+    56% calc(var(--top) + 32%),
+    59% calc(var(--top) + 38%), 
+    78% calc(var(--top) + 28%));
+}
+.body.left {
+  clip-path: polygon(
+    50% calc(var(--top) + 18%),
+    35% calc(var(--top) + 50%), 
+    50% calc(var(--top) + 60%));
+  background-color: var(--clr-orange);
+}
+.body.right {
+  clip-path: polygon(
+    50% calc(var(--top) + 18%),
+    65% calc(var(--top) + 50%), 
+    50% calc(var(--top) + 60%));
+  background-color: var(--clr-orange2);
+}
+.belly.right {
+  clip-path: polygon(
+    50% calc(var(--top) + 30%),
+    62% calc(var(--top) + 54%), 
+    50% calc(var(--top) + 60%));
+  background-color: #f7e3c9;
+}
+.belly.left {
+  clip-path: polygon(
+    50% calc(var(--top) + 30%),
+    38% calc(var(--top) + 54%), 
+    50% calc(var(--top) + 60%));
+  background-color: #f7e3c9;
+}
+
+.tail.stem {
+  background-color: var(--clr-orange);
+  clip-path: polygon( 
+    65% calc(var(--top) + 50%) ,
+    61% calc(var(--top) + 59%) ,
+    80% calc(var(--top) + 50%) );
+}
+.tail.end {
+ background-color: var(--clr-orange2);
+
+clip-path: polygon( 
+  72% calc(var(--top) + 50%) ,
+  80% calc(var(--top) + 50%) ,
+  70% calc(var(--top) + 38%) );
+}
+
+.charmander:hover .flame.red {
+  animation: flame .12s infinite;
+}
+.charmander:hover .flame.yellow {
+  animation: flame2 .15s infinite;
+}
+.flame.yellow {
+  background-color: #f2d11c;
+  animation: flame2 .32s infinite;
+}
+@keyframes flame {
+  0% {
+    clip-path: polygon( 
+      64.630% calc(var(--top) + 34.189%) ,
+      69.444% calc(var(--top) + 33.649%) ,
+      71.667% calc(var(--top) + 41.216%) );
+  }
+  100% {
+    clip-path: polygon( 
+      67.593% calc(var(--top) + 42.027%) ,
+      75.741% calc(var(--top) + 41.486%) ,
+      65.370% calc(var(--top) + 31.757%) );
+  }
+}
+@keyframes flame2 {
+  0%   { 
+  clip-path: polygon( 
+    73.889% calc(var(--top) + 35.541%) ,
+    67.963% calc(var(--top) + 40.946%) ,
+    76.852% calc(var(--top) + 40.135%) );
+  }
+  100% { 
+  clip-path: polygon( 
+    68.704% calc(var(--top) + 31.757%) ,
+    77.963% calc(var(--top) + 31.486%) ,
+    71.296% calc(var(--top) + 40.676%) );
+  }
+}
+.flame.red {
+  background-color: #f21c1c;
+  animation: flame .35s infinite;
+}
+
+.foot.left {
+  background-color: var(--clr-orange2);
+  clip-path: polygon( 
+    40% calc(var(--top) + 60%) , 
+    46% calc(var(--top) + 65%) ,
+    34% calc(var(--top) + 65%) );
+}
+.foot.right {
+  background-color: var(--clr-orange);
+  clip-path: polygon( 
+    60% calc(var(--top) + 60%) , 
+    66% calc(var(--top) + 65%) ,
+    54% calc(var(--top) + 65%) );
+}
+.leg.left {
+  background-color: var(--clr-orange);
+  clip-path: polygon(
+    35% calc(var(--top) + 50%) ,
+    40% calc(var(--top) + 65%) ,
+    50% calc(var(--top) + 60%) );
+}
+.leg.right {
+  background-color: var(--clr-orange2);
+  clip-path: polygon(
+    65% calc(var(--top) + 50%) ,
+    60% calc(var(--top) + 65%) ,
+    50% calc(var(--top) + 60%) );
+}
+
+.mouth {
+  clip-path: polygon(
+    32% calc(var(--top) + 25%), 
+    50% calc(var(--top) + 38%), 
+    68% calc(var(--top) + 25%));
+  background-color: #e18100;
+}
+.tongue {
+  clip-path: polygon(
+    40% calc(var(--top) + 28%), 
+    50% calc(var(--top) + 35%), 
+    60% calc(var(--top) + 28%));
+  background-color: #ff9287;
+}
+.head.left {
+  clip-path: polygon(
+    50% calc(var(--top) + 10%), 
+    32% calc(var(--top) + 25%), 
+    50% calc(var(--top) + 35%));
+  background-color: var(--clr-orange);
+}
+.charmander:hover .head.left {
+  clip-path: polygon(
+    50% calc(var(--top) + 10%), 
+    32% calc(var(--top) + 25%), 
+    50% calc(var(--top) + 32%));
+}
+
+.head.right {
+  clip-path: polygon(
+    50% calc(var(--top) + 10%), 
+    68% calc(var(--top) + 25%), 
+    50% calc(var(--top) + 35%));
+  background-color: var(--clr-orange2);
+}
+.charmander:hover .head.right {
+  clip-path: polygon(
+    50% calc(var(--top) + 10%), 
+    68% calc(var(--top) + 25%), 
+    50% calc(var(--top) + 32%));
+}
+

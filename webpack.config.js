@@ -15,7 +15,7 @@ module.exports = getConfig({
 
   stylePath: stylePath,
 
-  cssModules: false,
+  cssModules: true,
 
   /**
    * Production index.html settings. Used to generate dynamic

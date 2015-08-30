@@ -1,11 +1,11 @@
 import React from 'react'
 import Router from 'react-router'
-// import configureStore from './redux.store'
+import configureStore from './redux.store'
 import { Provider } from 'react-redux'
 import routes from './config.routes'
 // import routingUtils from './utils.routing'
-// import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react'
-// const store = configureStore()
+import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react'
+const store = configureStore()
 
 /**
  * One gotcha is that the child of Provider must be a function.
@@ -16,9 +16,14 @@ import routes from './config.routes'
  */
 const cb = function (Handler) {
   React.render(
-    <Provider store={{}}>
-      { () => <Handler /> }
-    </Provider>,
+    <div>
+      <Provider store={store}>
+        { () => <Handler /> }
+      </Provider>
+      <DebugPanel top right bottom>
+        <DevTools store={store} monitor={LogMonitor} />
+      </DebugPanel>
+    </div>,
     document.getElementById('app')
   )
 }
