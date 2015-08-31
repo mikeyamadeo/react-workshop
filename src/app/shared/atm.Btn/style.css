@@ -1,0 +1,21 @@
+@import 'settings.colors';
+
+.btn {
+  composes: btn-normalized from 'components';
+  padding: 10px;
+  background-color: transparent;
+  transition: all .25s ease-in-out;
+}
+
+.main {
+  composes: btn;
+  color: var(--clr-dark-navy);
+  border: solid 3px var(--clr-navy);
+  font-size: 1.4em;
+}
+
+.main:hover  {
+  color: white;
+  border: solid 3px var(--clr-dark-navy);
+  background-color: var(--clr-navy);
+}

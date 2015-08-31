@@ -3,37 +3,48 @@ import React, { PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 import Flexbox from 'obj.Flexbox'
 import StyledInput from 'atm.StyledInput'
-
-let inputValue = ''
+import Btn from 'atm.Btn'
 
 const AddPokemonForm = React.createClass({
+
+  getInitialState () {
+    return {
+      inputValue: ''
+    }
+  },
 
   propTypes: {
     onUpdate: PropTypes.func
   },
 
-  updateInput (e) {
-    inputValue = e.target.value
+  updateInput (inputValue) {
+    this.setState({
+      inputValue
+    })
+  },
+
+  onChange (e) {
+    this.updateInput(e.target.value)
   },
 
   onSubmit () {
+    const { inputValue } = this.state
     const { onUpdate } = this.props
+    this.updateInput('')
     onUpdate(inputValue)
-    inputValue = ''
   },
 
   render () {
-    const { onSubmit } = this
+    const { onSubmit, onChange } = this
+    const { inputValue } = this.state
 
     return (
       <Flexbox tag='form' { ...{ onSubmit} } styleName='root' direction='column' justify='center' align='center'>
         <div>
-          <StyledInput onChange={this.updateInput} />
+          <StyledInput { ...{ onChange, value: inputValue } } />
         </div>
-        <div>
-          <button type='submit' styleName='submit'>
-            Submit New Pokemon!
-          </button>
+        <div styleName='submit'>
+          <Btn copy='Submit a Pokemon!' type='submit' theme='main' />
         </div>
       </Flexbox>
     )
