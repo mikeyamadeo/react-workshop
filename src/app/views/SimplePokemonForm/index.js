@@ -1,6 +1,7 @@
+import style from './style'
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-// import Showcase from './components/org.Showcase'
+import CSSModules from 'react-css-modules'
 import List from './components/mol.List'
 import AddPokemonForm from './components/org.AddPokemonForm'
 import { submitPokemon } from './state/actions'
@@ -20,19 +21,22 @@ const PokemonView = React.createClass({
   },
 
   render () {
+    const { onUpdate } = this
     const { pkmn } = this.props
 
     return (
-      <div>
-        <AddPokemonForm onUpdate={this.onUpdate} />
-        <List pokemon={pkmn} />
+      <div styleName='container'>
+        <AddPokemonForm onUpdate={onUpdate} />
+        <List items={pkmn} />
       </div>
     )
   }
 
 })
 
-export default connect(selector, boundActions)(PokemonView)
+export default connect(
+  selector, boundActions
+)(CSSModules(PokemonView, style))
 
 function selector (state) {
 

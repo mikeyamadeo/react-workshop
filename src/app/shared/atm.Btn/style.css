@@ -2,14 +2,14 @@
 
 .btn {
   composes: btn-normalized from 'components';
-  padding: 10px;
+  padding: 5px 10px;
   background-color: transparent;
   transition: all .25s ease-in-out;
 }
 
 .main {
   composes: btn;
-  color: var(--clr-dark-navy);
+  color: var(--clr-navy);
   border: solid 3px var(--clr-navy);
   font-size: 1.4em;
 }

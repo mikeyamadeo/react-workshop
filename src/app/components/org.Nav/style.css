@@ -1,0 +1,22 @@
+@import 'settings.colors';
+
+.container {
+  padding: 15px;
+  background-color: var(--clr-red);
+}
+
+.item {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.item:hover {
+  font-size: 110%;
+}
+
+.link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .25s ease;
+}

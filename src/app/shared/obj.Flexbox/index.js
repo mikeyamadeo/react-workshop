@@ -42,4 +42,7 @@ const Flexbox = React.createClass({
   }
 })
 
-export default CSSModules(Flexbox, style, { allowMultiple: true, errorWhenNotFound: false })
+export default CSSModules(Flexbox, style, {
+  allowMultiple: true,
+  errorWhenNotFound: false
+})

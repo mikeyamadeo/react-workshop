@@ -1,0 +1,11 @@
+@import 'settings.colors';
+
+.container {
+  padding: 20px;
+}
+
+.item {
+  color: var(--clr-dark-navy);
+  font-size: 4em;
+  list-style: none;
+}

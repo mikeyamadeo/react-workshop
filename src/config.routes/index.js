@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route, DefaultRoute } from 'react-router'
 import App from '../app'
-import PokemonView from '../app/views/pokemon'
+import SimplePokemonForm from '../app/views/SimplePokemonForm'
 import WildPokemonView from '../app/views/WildPokemon'
 
 var routes = (
   <Route handler={App} >
-    <DefaultRoute handler={PokemonView} />
+    <Route name='simpleForm' path='/form' handler={SimplePokemonForm} />
     <Route name='wildPokemon' path='/wild' handler={WildPokemonView} />
   </Route>
 )

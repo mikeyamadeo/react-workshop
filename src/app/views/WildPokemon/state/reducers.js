@@ -13,7 +13,7 @@ export const wildPokemon = createReducer({
     // pokemon.forEach(p => {
     //   pokemonMap[p.name] = p
     // })
-    console.log(payload, 'from sprite reducer')
+    // console.log(payload, 'from sprite reducer')
     return {
       ...state,
       current: payload

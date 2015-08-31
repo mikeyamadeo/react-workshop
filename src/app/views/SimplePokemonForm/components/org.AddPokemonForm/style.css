@@ -1,0 +1,10 @@
+@import 'settings.colors';
+
+.root {
+  background-color: var(--clr-light-base);
+  padding: 20px;
+}
+
+.submit {
+  margin-top: 10px;
+}

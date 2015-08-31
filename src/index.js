@@ -3,8 +3,12 @@ import Router from 'react-router'
 import configureStore from './redux.store'
 import { Provider } from 'react-redux'
 import routes from './config.routes'
-// import routingUtils from './utils.routing'
+import routingUtils from './utils.routing'
 import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react'
+
+const env = process.env.NODE_ENV
+let panel
+
 const store = configureStore()
 
 /**
@@ -14,15 +18,17 @@ const store = configureStore()
  * works in React 0.13. In React 0.14, you will be able to put your
  * view hierarchy in <Provider> without wrapping it into a function.
  */
-const cb = function (Handler) {
+const cb = function (Handler, routerState) {
   React.render(
     <div>
       <Provider store={store}>
-        { () => <Handler /> }
+        { () => <Handler {...{routerState}}/> }
       </Provider>
-      <DebugPanel top right bottom>
-        <DevTools store={store} monitor={LogMonitor} />
-      </DebugPanel>
+      { panel = env === 'debug' ? (
+        <DebugPanel top right bottom>
+          <DevTools store={store} monitor={LogMonitor} />
+        </DebugPanel>
+      ) : null }
     </div>,
     document.getElementById('app')
   )
@@ -36,6 +42,7 @@ const router = Router.create({
  * Circumvent the circular dependency so routing functions
  * can be used outside of components.
  */
-// routingUtils.set(router)
+
+routingUtils.set(router)
 
 router.run(cb)

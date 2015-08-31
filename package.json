@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base public/"
+    "start": "webpack-dev-server --content-base public/",
+    "debug": "NODE_ENV=debug webpack-dev-server --content-base public/"
   },
   "author": "Mikey Murphy <mikeyamadeo@gmail.com> (https://twitter.com/TranscendMikey)",
   "license": "ISC",
