@@ -7,13 +7,7 @@ export const wildPokemon = createReducer({
 }, {
 
   [REQUEST_SPRITE_SUCCESS]: (state, { payload }) => {
-    // const { pokemon } = payload
-    // let pokemonMap = {}
 
-    // pokemon.forEach(p => {
-    //   pokemonMap[p.name] = p
-    // })
-    // console.log(payload, 'from sprite reducer')
     return {
       ...state,
       current: payload
