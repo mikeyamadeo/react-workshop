@@ -1,11 +1,11 @@
 # react-workshop
 
 ### Up and running
-$ npm install
-$ npm start
+* $ npm install
+* $ npm start
 
 To get debug panel
-$ npm debug
+* $ npm debug
 
 ### About
 There are two views in this about:
